@@ -1,0 +1,22 @@
+<md-content class="md-padding">
+    <md-table-container>
+        <table md-table>
+            <thead md-head>
+                <tr md-row>
+                    <th class="md-title ng-binding ng-scope flex-25">id</th>
+                    <th class="md-title ng-binding ng-scope flex-25">name</th>
+                </tr>
+            </thead>
+            <tbody md-body>
+                <tr md-row ui-sref="user-detail({ login: user.login })" ng-repeat="user in users">
+                    <td md-cell class="ng-scope flex-25">
+                        {{user.id}}
+                    </td>
+                    <td md-cell class="ng-scope flex-25">
+                        {{user.name}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+</md-content>

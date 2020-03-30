@@ -1,0 +1,36 @@
+<md-content class="md-padding">
+    <md-table-container>
+        <table md-table>
+            <thead md-head>
+                <tr md-row>
+                    <th class="md-title ng-binding ng-scope flex-25">name</th>
+                    <th class="md-title ng-binding ng-scope flex-25">description</th>
+                    <th class="md-title ng-binding ng-scope flex-25">URL</th>
+                    <th class="md-title ng-binding ng-scope flex-25">forks_count</th>
+                    <th class="md-title ng-binding ng-scope flex-25">watchers_count</th>
+                </tr>
+            </thead>
+            <tbody md-body>
+                <tr md-row ng-repeat="repo in userRepos">
+                    <td md-cell class="ng-scope flex-25">
+                        {{repo.name}}
+                    </td>
+                    <td md-cell class="ng-scope flex-25">
+                        {{repo.description}}
+                    </td>
+                    <td md-cell class="ng-scope flex-25">
+                        {{repo.url}}
+                    </td>
+                    <td md-cell class="ng-scope flex-25">
+                        {{repo.forks_count}}
+                    </td>
+                    <td md-cell class="ng-scope flex-25">
+                        {{repo.watchers_count}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+    <md-button ui-sref="user-detail({ login: login })">Back to details</md-button>
+    <md-button ui-sref="users">Back to user list</md-button>
+</md-content>
